@@ -57,10 +57,10 @@ public class MyPrivateListen {
         // 通过.text(...) 向builder中追加一句话。
         // 通过.face(ID) 向builder中追加一个表情。
         // 通过.build() 构建出最终消息。
-        MessageContent msg = msgBuilder.text("表情：").face(9).build();
+        MessageContent msg = msgBuilder.text("").text("祝你有美好一天").build();
 
         // 直接通过这个msg发送。
-        sender.sendPrivateMsg(privateMsg, msg);
+        sender.sendPrivateMsg(privateMsg,msg);
 
         // 方法2：使用CAT码发送消息。
         // 使用CAT码构建一个需要解析的消息是最灵活的，
@@ -82,7 +82,7 @@ public class MyPrivateListen {
         String cat3 = catCodeUtil.getStringTemplate().face(9);
 
         // 在cat码前增加一句 '表情' 并发送
-        sender.sendPrivateMsg(privateMsg, "表情：" + cat3);
+        //sender.sendPrivateMsg(privateMsg, "表情：" + cat3);
 
     }
 
